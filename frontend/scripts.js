@@ -3,7 +3,7 @@ root.innerHTML = '';
 root.innerHTML += '<ul>'
 
 var request = new XMLHttpRequest()
-request.open('GET', 'http://sjc-ngdevx-d06.cisco.com:23456/mymovies', true)
+request.open('GET', '/mymovies/', true)
 
 request.onload = function() {
   // Begin accessing JSON data here

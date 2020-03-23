@@ -31,6 +31,7 @@ class Product(Resource):
         # r = redis.Redis(host='redis', port=6379)
         # r = redis.Redis(host='192.168.16.4', port=6379)
         r = redis.Redis(host='devkeliuredis2.marathon.l4lb.thisdcos.directory', port=6379)
+        # r = redis.Redis(host='sjc-ngdevx-d04.cisco.com', port=10321)
         ke = dict()
         ke['id'] = r.get('keliu').decode(encoding)
         ke['title'] = "ke's testing"
@@ -41,6 +42,7 @@ class Product(Resource):
 # Create routes
 api.add_resource(Product, '/mymovies/')
 
+
 # Run the application
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
